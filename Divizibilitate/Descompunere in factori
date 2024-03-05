@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int N;
+
+int main() {
+    cin >> N;
+    int div = 2;
+    while(N ^ 1) {
+        int pw = 0;
+        while(N % div == 0) {
+            N /= div;
+            cout << div << ' ';
+            pw++;
+        }
+
+        div++;
+        if(N > 1 && div * div > N) div = N;
+    }
+
+}
