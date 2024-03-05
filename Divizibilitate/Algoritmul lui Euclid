@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int N, M;
+
+int main() {
+    cin >> N >> M;
+    while(N != 0) {
+        int r = M % N;
+        M = N; N = r;
+    } 
+    M == 0 ? cout << -1 : cout << M;
+}
